@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 222,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -43,37 +43,11 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T09:29:26.698Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\FitnessProgram\\Login.cs",
-              "RelativeDocumentMoniker": "FitnessProgram\\Login.cs",
-              "ToolTip": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\FitnessProgram\\Login.cs",
-              "RelativeToolTip": "FitnessProgram\\Login.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAQwDEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T11:56:00.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\FitnessProgram\\App.xaml",
-              "RelativeDocumentMoniker": "FitnessProgram\\App.xaml",
-              "ToolTip": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\FitnessProgram\\App.xaml",
-              "RelativeToolTip": "FitnessProgram\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-20T11:50:38.091Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -98,6 +72,30 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-24T09:45:50.681Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\FitnessProgram\\App.xaml",
+              "RelativeDocumentMoniker": "FitnessProgram\\App.xaml",
+              "ToolTip": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\FitnessProgram\\App.xaml",
+              "RelativeToolTip": "FitnessProgram\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T11:50:38.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\FitnessProgram\\Login.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\Login.cs",
+              "ToolTip": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\FitnessProgram\\Login.cs",
+              "RelativeToolTip": "FitnessProgram\\Login.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwDEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T11:56:00.768Z"
             }
           ]
         }
