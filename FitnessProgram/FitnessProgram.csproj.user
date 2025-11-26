@@ -8,5 +8,8 @@
     <Compile Update="NextWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TestWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
