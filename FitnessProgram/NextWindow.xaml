@@ -56,5 +56,17 @@
             VerticalAlignment="Center" 
             Margin="0,40,48,0" 
             Click="Button_Click"/>
+        <Button 
+            Grid.Row='2'
+            Width="120"
+            Height="50"
+            FontSize="15"
+            Background="LightBlue"
+            x:Name="GoToActivity" 
+            Content="Team Activities" 
+            HorizontalAlignment="Center" 
+            Margin="0,30,0,0"  
+            VerticalAlignment="Top" 
+            Click="GoToActivity_Click"/>
     </Grid>
 </Window>

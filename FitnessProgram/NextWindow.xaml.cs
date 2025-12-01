@@ -39,5 +39,11 @@ namespace FitnessProgram
                 main.Show();
             }
         }
+
+        private void GoToActivity_Click(object sender, RoutedEventArgs e)
+        {
+            MemberTestWindow test = new MemberTestWindow();
+            test.Show();
+        }
     }
 }
