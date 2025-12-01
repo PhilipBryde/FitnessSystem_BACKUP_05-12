@@ -1,0 +1,30 @@
+﻿<Window x:Class="FitnessProgram.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessProgram"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="300" Width="400">
+    <!--Philip Kode -->
+    <Grid Margin="10" Background="Black">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <TextBlock Text="Navn:" Foreground="White"/>
+            <TextBox x:Name="NameInput" Width="200" />
+
+            <TextBlock Text="Køn (M/F):" Foreground="White" Margin="0,10,0,0"/>
+            <TextBox x:Name="GenderInput" Width="200" />
+
+            <TextBlock Text="Alder:" Foreground="White" Margin="0,10,0,0"/>
+            <TextBox x:Name="AgeInput" Width="200" />
+
+            <Button 
+                Content="Opret bruger"
+                Background="LightGreen"
+                Click="Button_Create_Click"
+                Width="150"
+                Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

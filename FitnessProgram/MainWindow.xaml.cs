@@ -27,5 +27,14 @@ namespace FitnessProgram
             next.Show(); //Åbner vinduet når der bliver trykket
             this.Close(); //Lukker det nuværende vindue
         }
+
+        // register Window
+        private void GoToRegisterWindow_Click(object sender, RoutedEventArgs e)
+        {
+            Fitness fitness = new Fitness();
+            RegisterWindow test = new RegisterWindow(fitness);
+            test.Show();
+        }
+
     }
 }

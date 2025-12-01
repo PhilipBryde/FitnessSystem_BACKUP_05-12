@@ -46,5 +46,7 @@ namespace FitnessProgram
             activity.Show();
             this.Close();
         }
+
+        
     }
 }
