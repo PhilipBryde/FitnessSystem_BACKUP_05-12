@@ -7,7 +7,17 @@
         mc:Ignorable="d"
         Title="ActivityWindow" Height="450" Width="800">
     <Grid Background="Black">
-        <TextBlock x:Name="ActivityBlock" Foreground="White" FontSize="20" HorizontalAlignment="Left" Margin="277,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center"/>
+        <ItemsControl ItemsSource="{Binding Activities}" Margin="250,0,0,0" VerticalAlignment="Center">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="0,5">
+                        <TextBlock Text="{Binding}" Foreground="White" FontSize="20" Width="200" TextWrapping="Wrap"/>
+                        <Button Content="Action" Margin="10,0,0,0" Click="Button_Click"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
         <TextBlock x:Name="AmmountBlock" Foreground="White" FontSize="20" HorizontalAlignment="Left" Margin="462,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center"/>
 
         <Label 
@@ -22,8 +32,9 @@
 
         <Button 
         Grid.Row="0"
-        Content="Tilbage" 
-        Background="LightGreen"
+        Content="Tilbage"
+        Foreground="White"
+        Background="DeepSkyBlue"
         HorizontalAlignment="Right" 
         VerticalAlignment="Top"
         Width="45"
@@ -31,5 +42,6 @@
         Margin="0,73,50,0" 
         Click="BackButton_Click"/>
     </Grid>
+
 
 </Window>
