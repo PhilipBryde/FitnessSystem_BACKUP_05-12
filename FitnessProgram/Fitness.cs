@@ -11,6 +11,7 @@ public class Fitness
     public Fitness()
     {
         // Opretter medlemmer med givende id, navn og køn
+        memberList.Add(new Member(0, "admin", 'M', "Admin"));
         memberList.Add(new Member(1, "Mathias", 'M'));
         memberList.Add(new Member(2, "Anders", 'M'));
         memberList.Add(new Member(3, "Sofie", 'F'));

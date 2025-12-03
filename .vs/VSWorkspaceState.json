@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\FitnessProgram",
-    "\\FitnessProgram\\WPF"
+    "\\FitnessProgram"
   ],
-  "SelectedNode": "\\FitnessProgram\\WPF\\MemberTestWindow.xaml.cs",
+  "SelectedNode": "\\FitnessProgram.slnx",
   "PreviewInSolutionExplorer": false
 }
