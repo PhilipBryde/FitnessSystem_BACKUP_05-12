@@ -33,6 +33,7 @@ namespace FitnessProgram
             List<string> localMembers = fitness.MemberFromFile();
             List<string> localActivities = fitness.ActivityFromFile();
             Yoga.Text = localActivities[0].ToUpper() + Environment.NewLine + localMembers[1] + Environment.NewLine + localMembers[3] + Environment.NewLine + localMembers[8] + Environment.NewLine + localMembers[11] + Environment.NewLine + localMembers[13];
+            Boxing.Text = localActivities[1].ToUpper() + Environment.NewLine + localMembers[1] + Environment.NewLine + localMembers[4] + Environment.NewLine + localMembers[7];
             /*string filePath = @"ActivityList.txt";
             //string fileText = File.ReadAllText(filePath);
             if (File.Exists(filePath))
