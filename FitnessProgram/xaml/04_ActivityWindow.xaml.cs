@@ -65,6 +65,7 @@ namespace FitnessProgram
             Pilates.Text = localActivities[3].ToUpper();
         }
 
+
         // Remove a member from an activity
         private void RemoveMemberFromActivity()
         {

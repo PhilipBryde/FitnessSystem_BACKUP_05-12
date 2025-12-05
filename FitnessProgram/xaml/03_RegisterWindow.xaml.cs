@@ -26,6 +26,7 @@ namespace FitnessProgram
             _fitness = fitness;
         }
 
+
         private void Button_Create_Click(object sender, RoutedEventArgs e)
         {
             string name = NameInput.Text;

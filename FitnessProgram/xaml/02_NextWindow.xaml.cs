@@ -42,7 +42,8 @@ namespace FitnessProgram
         {
             ActivityWindow activity = new ActivityWindow(fitness, member);
             activity.Show();
-            this.Hide(); // Use Hide() instead of Close()
+            Application.Current.MainWindow = activity;
+            this.Close();
         }
 
         // --- Button: Go back to Main Menu --- Philip
