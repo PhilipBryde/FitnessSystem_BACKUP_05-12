@@ -214,6 +214,14 @@ namespace FitnessProgram
                 MessageBox.Show("Du er allerede tilmeldt dette hold.");
                 return;
             }
+
+            // Fuldt hold på 5 tjek
+            if (currentCount >= 5)   
+            {
+                MessageBox.Show("Dette hold er fyldt. (5/5)");
+                return;
+            }
+
             // Tilføj medlem
             target.Text += Environment.NewLine + displayMember;
             MessageBox.Show($"Du er nu tilmeldt {activityIndex}.");
