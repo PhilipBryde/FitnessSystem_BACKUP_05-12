@@ -472,7 +472,7 @@ namespace FitnessProgram
             if (ActivityGrid != null)
             {
                 newActCount++;
-                Grid.SetRow(block, 1);
+                /*Grid.SetRow(block, 1);
                 block.Foreground = Brushes.White;
                 block.FontWeight = FontWeights.Bold;
                 block.HorizontalAlignment = HorizontalAlignment.Left;
@@ -481,10 +481,10 @@ namespace FitnessProgram
                 block.TextWrapping = TextWrapping.Wrap;
 
                 block.Text = newActName.ToUpper(); 
-                ActivityGrid.Children.Add(block);
-                File.AppendAllText(filePath, Environment.NewLine + newActName);
-                MessageBox.Show($"Aktivitet {newActName} oprettet");
+                ActivityGrid.Children.Add(block);*/
+                File.AppendAllText(filePath, Environment.NewLine + newActName); //Tilføjer den nye aktivitet til textfilen
                 ShowActivity();
+                MessageBox.Show($"Aktivitet {newActName} oprettet");
                 UpdateAllCapacities();
             }
         }
