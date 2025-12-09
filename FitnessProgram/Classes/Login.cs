@@ -1,62 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using FitnessProgram;
 
-
+// Philip
 namespace FitnessProgram
 {
-    // TIL SIDNEY OG MIG SELV(PHILIP) VI SKAL SELF MATCHE DE METODER VI KALDER I MEMBERS KLASSEN
-    // OG I MaindWindow.xaml det her er bare hvordna login kan virke og se ud(måske)
-
-
-    /// <summary>
-    /// Login-klassen står for at verificere brugere.
-    /// Brugeren logger ind med:
-    ///   - Fornavn som brugernavn
-    ///   - ID som password
-    /// </summary>
+    // Login-klassen står for at verificere brugere (Medlemmer og Administratorer).
     public class Login
     {
-          // Dette felt (_members) holder en liste af alle medlemmer i systemet.
-          // Underscore "_" betyder: privat internt felt
+        private List<Member> _members; // Felt til at holde systemets liste af medlemmer.
 
-          private List<Member> _members;
+        public Login(List<Member> members) // Constructor modtager listen af medlemmer.
+        {
+            // Kaster en fejl hvis listen er null ved oprettelse, for at sikre stabilitet.
+            _members = members ?? throw new ArgumentNullException(nameof(members), "Medlemsliste må ikke være null ved initialisering.");
+        }
 
-          // Constructor modtager listen af medlemmer
-          public Login(List<Member> members)
-          {
-              _members = members;
-          }
+        // Forsøger at logge en bruger ind.
+        // Login sker via Medlemmets Fornavn (username) og ID (password).
+        // Returnerer Member-objektet hvis successfuldt login, ellers returneres null.
+        public Member? Authenticate(string username, string password)
+        {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password)) // Tjekker for tomme eller whitespace-input.
+            {
+                return null;
+            }
 
-          /// <summary>
-          /// Nu skal vi logge en bruger ind.
-          /// username = fornavn
-          /// password = medlems-ID
-          /// Returnerer Member-objektet hvis successfuldt login, ellers null.
-          /// </summary>
+            // 1. Forsøg at konvertere password (som skal være ID) til et tal (int).
+            if (!int.TryParse(password, out int id))
+            {
+                // Returnerer null, hvis password ikke er et gyldigt ID-nummer.
+                return null;
+            }
 
-          public Member Authenticate(string username, string password)
-          {
-              // Først laver vi password om til et tal (ID)
-              if (!int.TryParse(password, out int id))
-              {
-                  return null;
-              }
+            // 2. Søg efter det første medlem (FirstOrDefault), der opfylder begge betingelser:
+            // - Fornavn (første ord i m.name) matcher det indtastede brugernavn.
+            // - Medlemmets ID matcher det konverterede password (id).
+            var authenticatedMember = _members.FirstOrDefault(m =>
+                m.name.Split(' ')[0].Equals(username, StringComparison.OrdinalIgnoreCase)
+                && m.id == id);
 
-              // Nu finder det første medlem hvor både:
-              // Fornavnet matcher username
-              // ID Matcher password
-
-              return _members.FirstOrDefault(m =>
-                 m.name.Split(' ')[0].Equals(username, StringComparison.OrdinalIgnoreCase)
-                 && m.id == id
-              );
-          }
+            return authenticatedMember; // Returnerer det fundne medlem (eller null, hvis ingen match).
+        }
 
     }
-
 }

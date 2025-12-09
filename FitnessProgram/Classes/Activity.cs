@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FitnessProgram;
 
-
+// Sidney og Philip
 namespace FitnessProgram
 {
     public class ActivityInfo

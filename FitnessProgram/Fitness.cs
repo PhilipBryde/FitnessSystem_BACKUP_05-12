@@ -34,17 +34,32 @@ public class Fitness
     public List<Member> GetAllMembers() //Public metode der retunere listen af den gamle liste over medlemmer
     {
         return memberList;
-    } 
+    }
 
     // Login - Philip
-    public Member Authenticate(string username, string password)
+    // Forsøger at logge en bruger ind.
+    // Login sker via Medlemmets Fornavn (username) og ID (password).
+    // Returnerer Member-objektet hvis successfuldt login, ellers returneres null.
+    public Member? Authenticate(string username, string password) // Member? for at håndtere null korrekt
     {
+        // Tjekker for tomme eller whitespace-input, før vi fortsætter.
+        if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+        {
+            return null;
+        }
+
+        // Forsøg at konvertere password (ID) til et tal. Hvis det fejler, returneres null.
         if (!int.TryParse(password, out int id))
             return null;
 
-        return memberList.FirstOrDefault(m =>
-            m.name.Equals(username, StringComparison.OrdinalIgnoreCase)
+        // Søg efter et medlem, hvor ID matcher, og hvor Fornavnet matcher username.
+        // Vi splitter navnet for at få Fornavnet [m.name.Split(' ')[0]].
+        var authenticatedMember = memberList.FirstOrDefault(m =>
+            m.name.Split(' ')[0].Equals(username, StringComparison.OrdinalIgnoreCase)
             && m.id == id);
+
+        // Returnerer det fundne medlem (eller null).
+        return authenticatedMember;
     }
 
     // REGISTER (opret nyt medlem) - Philip
@@ -56,7 +71,7 @@ public class Fitness
         return newMember;
     }
 
-
+    // Sidney
     public List<string> MemberFromFile() //Public metode med liste over medlemmer -- Sidney
     {
         string filePath = @"MemberList.txt"; //Gemmer stien til textfilen

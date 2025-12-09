@@ -8,7 +8,7 @@ using FitnessProgram;
 
 namespace FitnessProgram 
 {
-    public class Member
+    public class Member //Sidney
     {        
         //Opretter forskellige variabler til vores medlemmer;de er alle tomme og kan tilgåes og ændres senere hen (ved brug af get; set,)
         public int id { get; set; }
