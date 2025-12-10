@@ -13,12 +13,12 @@ namespace FitnessProgram
         private readonly Fitness fitness; // Shared fitness system
         private readonly Member member;   // Logged in user
         public List<string> _localList;
-        public MemberWindow(Fitness fitness, Member member)
+        public MemberWindow(Fitness fitness)
         {
             InitializeComponent();
             //_fitness = fitness;
             this.fitness = fitness;
-            this.member = member;
+            //this.member = member;
             this._localList = fitness.MemberFromFile().ToList();
             ShowMembers(); // Kalder ShowMembers for at vise medlemmerne
         }
@@ -35,8 +35,8 @@ namespace FitnessProgram
                 allMembers.AppendLine($"ID: {member.id} Navn: {member.name} Køn: {member.gender}");
             }
 
-            MemberBlock.Text = allMembers.ToString();*/
-            StringBuilder allMembers = new StringBuilder();
+            MemberBlock.Text = allMembers.ToString();*/ //Legacy print members ud fra listen i Fitness.cs
+            StringBuilder allMembers = new StringBuilder(); //Tager hver medlem og laver dem om til én string
 
             for (int i = 0; i < _localList.Count; i++)
             {
@@ -54,7 +54,7 @@ namespace FitnessProgram
                 if (memberIndex >= 0 && memberIndex < _localList.Count)
                 {
                     _localList.RemoveAt(memberIndex);
-                    //File.WriteAllLines(@"MemberList.txt", localList);
+                    //File.WriteAllLines(@"MemberList.txt", localList); Kan fjerne medlem permanent fra textfilen
                     ShowMembers();
                     MessageBox.Show($"{memberIndex} er blevet slettet!");
                 }
@@ -77,7 +77,7 @@ namespace FitnessProgram
         // BACK BUTTON HANDLER
         private void GoToNextWindow_Click(object sender, RoutedEventArgs e)
         {
-            NextWindow next = new NextWindow(member, fitness);
+            NextWindow next = new NextWindow(fitness);
             next.Show();
             this.Close();
         }
