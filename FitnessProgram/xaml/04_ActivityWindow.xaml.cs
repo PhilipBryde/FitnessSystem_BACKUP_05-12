@@ -370,7 +370,6 @@ namespace FitnessProgram
             if (target == null) return;
 
             // Denne linje er kun til identifikation i metoden, men den fulde streng er ikke nødvendig for fjernelse takket være 'Contains'
-            // Bemærk: memberLineToRemove bruges ikke længere direkte, men koden er beholdt som i dit originale udkast.
             string memberLineToRemove;
             if (member.role.Equals("admin", StringComparison.OrdinalIgnoreCase))
             {

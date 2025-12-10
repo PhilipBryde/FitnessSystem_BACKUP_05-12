@@ -80,15 +80,7 @@
             VerticalAlignment="Center" 
             Click="DeleteMemberButton_Click"/>
         
-        <!-- Sidney Fun Button -->
-        <Button 
-            Grid.Row="0"
-            Content="Button" 
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Center" 
-            Margin="50,0,0,0" 
-            />
-        
+
         <TextBlock 
             HorizontalAlignment="Left" 
             Margin="589,88,0,0" 
