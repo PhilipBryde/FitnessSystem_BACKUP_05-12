@@ -21,7 +21,7 @@ namespace FitnessProgram
         }
 
         // --- LOGIN BUTTON --- Philip
-        public void Login_Click(object sender, RoutedEventArgs e)
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
             string username = UsernameInput.Text.Trim();
             string password = PasswordInput.Password.Trim();

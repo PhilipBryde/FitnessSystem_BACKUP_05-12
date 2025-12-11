@@ -48,7 +48,7 @@ namespace FitnessProgram
         }
 
         // Sidney Kode
-        public void ShowActivity() //Oprettelse af aktiviteter
+        private void ShowActivity() //Oprettelse af aktiviteter
         {
             List<string> localMembers = fitness.MemberFromFile(); //Kopi af listen over medlemmer
             List<string> localActivities = fitness.ActivityFromFile(); //Kopi af listen over aktiviteter
@@ -450,16 +450,8 @@ namespace FitnessProgram
             RemoveMemberFromActivity();
         }
 
-        // BACK BUTTON HANDLER
-        private void GoToNextWindow_Click(object sender, RoutedEventArgs e) //Knap der vender tilbage til hovedmenuen
-        {
-            NextWindow next = new NextWindow(member, fitness);
-            next.Show();
-            this.Close();
-        }
-
-        // Sidney
-        private void CreateActivity_Click(object sender, RoutedEventArgs e) 
+    
+        private void CreateActivity_Click(object sender, RoutedEventArgs e) //Knap der opretter ny aktivitet -- Sidney
         {
             string newActName = NewActivity?.Text.Trim(); //Brugerens input bliver sat i ind string der bruges senere
 
@@ -495,5 +487,13 @@ namespace FitnessProgram
                 MessageBox.Show($"Aktivitet {newActName} oprettet");
             }
         }
+
+        private void GoToNextWindow_Click(object sender, RoutedEventArgs e) //Knap der vender tilbage til hovedmenuen -- Sidney
+        {
+            NextWindow next = new NextWindow(member, fitness);
+            next.Show();
+            this.Close();
+        }
+
     }
 }

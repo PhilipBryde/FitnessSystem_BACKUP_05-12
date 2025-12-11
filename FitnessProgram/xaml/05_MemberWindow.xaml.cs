@@ -23,8 +23,7 @@ namespace FitnessProgram
             ShowMembers(); // Kalder ShowMembers for at vise medlemmerne
         }
 
-        // --- Show all members in TextBlock ---
-        public void ShowMembers()
+        private void ShowMembers() //Metode der viser alle medlemmerne fra textfilen i en string -- Sidney
         {
             /*List<Member> localList = _fitness.GetAllMembers();
             StringBuilder allMembers = new StringBuilder();
@@ -36,17 +35,16 @@ namespace FitnessProgram
             }
 
             MemberBlock.Text = allMembers.ToString();*/ //Legacy print members ud fra listen i Fitness.cs
-            StringBuilder allMembers = new StringBuilder(); //Tager hver medlem og laver dem om til én string
+            StringBuilder allMembers = new StringBuilder(); //Opretter ny StringBuilder
 
             for (int i = 0; i < _localList.Count; i++)
             {
                 allMembers.AppendLine(_localList[i]);  // viser 1, 2, 3... i stedet for 0, 1, 2...
             }
-            MemberBlock.Text = allMembers.ToString();
+            MemberBlock.Text = allMembers.ToString(); //Tager hver medlem og laver dem om til én string via StringBuilder
         }
 
-        // --- Remove member by ID ---
-        public void RemoveMember()
+        private void RemoveMember() //Metode der fjerner medlem via dens index i listen, Gamle version fjernede via medlemmets ID -- Sidney
         {
             if (int.TryParse(EnterMember.Text, out int memberID))
             {
@@ -67,25 +65,18 @@ namespace FitnessProgram
             {
                 MessageBox.Show("Indtast venligst et tal");
             }
-
-
         }
 
+        private void DeleteMemberButton_Click(object sender, RoutedEventArgs e) //Knap der kalder på RemoveMember() metoden -- Sidney
+        {
+            RemoveMember();
+        }
 
-
-        // --- Back button ---
-        // BACK BUTTON HANDLER
-        private void GoToNextWindow_Click(object sender, RoutedEventArgs e)
+        private void GoToNextWindow_Click(object sender, RoutedEventArgs e) //Knap der vender tilbage til menuen -- Sidney
         {
             NextWindow next = new NextWindow(member, fitness);
             next.Show();
             this.Close();
-        }
-
-        // --- Delete member button ---
-        private void DeleteMemberButton_Click(object sender, RoutedEventArgs e)
-        {
-            RemoveMember();
         }
     }
 }

@@ -31,7 +31,7 @@
         <!-- Members Button -->
         <Button 
             Grid.Row="2"
-            Content="Members"
+            Content="Medlemmer"
             x:Name="MemberButton"
             Width="100"
             Height="50"
